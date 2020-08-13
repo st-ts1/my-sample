@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue-routerテスト</title>
+    <style type="text/css">
+        /*初期表示時にテンプレートが一瞬表示されてしまうのを防ぐ*/
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app" v-cloak>
+        {{ test }}
+        <router-link to="/user/てすと">テストユーザ</router-link>
+        <router-link to="/user/てすと2">テスト2ユーザ</router-link>
+        <router-link to="/">TOP</router-link>
+        <router-view></router-view>
+    </div>
+
+    <!-- vueとvue-router -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- CDNのElementで日本語を使う-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="http://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- ここから自作部分 -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
